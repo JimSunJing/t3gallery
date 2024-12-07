@@ -5,7 +5,7 @@
 - [x] 首先将项目部署上（Vercel）
 - [x] 用临时数据写出网页ui
 - [x] 优化 build 流程
-- [ ] 设置数据库（Vercel Postgres）
+- [x] 设置数据库（Vercel Postgres）
 - [ ] 将数据库数据推送前端
 - [ ] 用户认证（Clerk）
 - [ ] 添加图片上传功能
