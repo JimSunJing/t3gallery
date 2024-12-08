@@ -11,6 +11,9 @@ importers:
       '@clerk/nextjs':
         specifier: ^6.8.0
         version: 6.8.0(next@15.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@clerk/types':
+        specifier: ^4.39.0
+        version: 4.39.0
       '@t3-oss/env-nextjs':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.7.2)(zod@3.23.8)

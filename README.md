@@ -7,7 +7,7 @@
 - [x] 优化 build 流程
 - [x] 设置数据库（Vercel Postgres）
 - [x] 将数据库数据推送前端
-- [ ] 用户认证（Clerk）
+- [x] 用户认证（Clerk）
 - [ ] 添加图片上传功能
 - [ ] error管理（Sentry）
 - [ ] 图片详情界面/路由管理(parallel route)
