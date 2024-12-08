@@ -21,8 +21,13 @@ jobs:
         with:
           node-version: "22" # Specify the Node.js version you are using
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
       - name: Install dependencies
-        run: pnpm install # or 'pnpm install' if you are using pnpm
+        run: pnpm install
 
       - name: Run TypeScript type check
-        run: npx tsc --noEmit
+        run: pnpm typecheck
