@@ -9,7 +9,7 @@
 - [x] 将数据库数据推送前端
 - [x] 用户认证（Clerk）
 - [x] 添加图片上传功能
-- [ ] "taint"(server-only)
+- [x] "react taint"(server-only data)
 - [ ] 使用 next/image 优化图片
 - [ ] error管理（Sentry）
 - [ ] 图片详情界面/路由管理(parallel route)
