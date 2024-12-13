@@ -10,7 +10,7 @@
 - [x] 用户认证（Clerk）
 - [x] 添加图片上传功能
 - [x] "react taint"(server-only data)
-- [ ] 使用 next/image 优化图片
+- [x] 使用 next/image 优化图片
 - [ ] error管理（Sentry）
 - [ ] 图片详情界面/路由管理(parallel route)
 - [ ] 删除按钮(Server Action)
