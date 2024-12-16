@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import { useUploadThing } from "~/utils/uploadthing";
 
 // infer the input type from the useUploadthing function
@@ -50,8 +51,16 @@ const UploadIcon = () => {
 export function SimpleUploadButton() {
   const router = useRouter();
   const { inputProps } = useUploadThingInputProps("imageUploader", {
+    onUploadBegin() {
+      toast("Uploading...", {
+        duration: 100000,
+        id: "upload-begin",
+      });
+    },
     onClientUploadComplete() {
       router.refresh();
+      toast.dismiss("upload-begin");
+      toast("Upload Complete!");
     },
   });
   return (

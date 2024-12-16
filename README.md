@@ -13,6 +13,7 @@
 - [x] 使用 next/image 优化图片
 - [x] error管理（Sentry）
 - [x] 图片详情界面/路由管理(parallel route)
+- [x] ShadUI toast
 - [ ] 删除按钮(Server Action)
 - [ ] 数据分析(posthog)
 - [ ] API限制/RateLimit(upstash)
