@@ -17,8 +17,8 @@ export default async function FullPageImageView(props: { id: number }) {
           className="h-full w-full flex-shrink object-contain object-center"
         />
       </div>
-      <div className="flex min-w-48 flex-grow flex-col border-l">
-        <div className="break-words border-b-2 p-2 text-center text-xl">
+      <div className="flex min-w-96 flex-grow flex-col items-center justify-center border-l">
+        <div className="w-96 break-words border-b border-slate-500 p-2 text-center text-xl">
           {image.name}
         </div>
         <div className="flex flex-col p-2">

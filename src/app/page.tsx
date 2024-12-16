@@ -19,7 +19,7 @@ async function Images() {
               height={192}
             />
           </Link>
-          <p className="break-words">{image.name}</p>
+          <p className="truncate break-words">{image.name}</p>
         </div>
       ))}
     </div>
