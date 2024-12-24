@@ -87,8 +87,12 @@ export function SimpleUploadButton() {
     },
     onUploadError(error) {
       toast.dismiss("upload-begin");
-      posthog.capture("upload_error", { error });
-      toast("Upload failed");
+      if (error.message === "User Has No Upload Permissions") {
+        toast("No Permission, contact developer");
+      } else {
+        posthog.capture("upload_error", { error });
+        toast("Upload failed");
+      }
     },
     onClientUploadComplete() {
       router.refresh();
