@@ -4,6 +4,8 @@ import { db } from "~/server/db";
 import { images } from "./db/schema";
 import { and, eq } from "drizzle-orm";
 import { redirect, RedirectType } from "next/navigation";
+import { revalidatePath } from "next/cache";
+import analyticsServerClient from "./analytics";
 
 export const getMyImages = async () => {
   const user = await auth();
@@ -30,7 +32,7 @@ export const getImageById = async (id: number) => {
   });
 
   if (!image) {
-    throw new Error("Image not found");
+    redirect("/");
   }
 
   if (image.userId !== user.userId) {
@@ -50,6 +52,14 @@ export const deleteImage = async (id: number) => {
     .delete(images)
     .where(and(eq(images.id, id), eq(images.userId, user.userId)));
 
-  // console.log("deleted");
-  redirect("/", RedirectType.replace);
+  analyticsServerClient.capture({
+    distinctId: user.userId,
+    event: "Delete image",
+    properties: {
+      image_id: id,
+    },
+  });
+
+  revalidatePath("/");
+  redirect("/");
 };
